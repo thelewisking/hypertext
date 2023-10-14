@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "Hyper Read",
+    "version": "1.0",
+  
+    "description": "Emboldens text to help ADHD reading",
+  
+    "icons": {
+      "48": "icons/bold-48.png"
+    },
+    "homepage_url": "https://github.com/thelewisking/hypertext",
+
+    "browser_action": {
+      "default_icon": {
+        "19": "icons/bold-19.png",
+        "38": "icons/bold-38.png"
+      },
+      "default_title": "Hyper Text",
+      "default_popup": "popup/menu.html"
+    },
+    
+    "permissions": ["activeTab"],
+
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "js": ["main.js"]
+      }
+    ]
+
+    
+
+    
+  }
